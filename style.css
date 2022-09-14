@@ -1,0 +1,126 @@
+/* Importing/Linking to the MedievalSharp Google Font */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Space+Grotesk:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+
+    /* box-sizing: border-box includes padding and a border when setting a width or height */
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'MedievalSharp', cursive;
+    line-height: 1.7;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: rgb(96, 82, 82);
+}
+
+p{
+    color: rgb(96, 82, 82);
+}
+
+a{
+    text-decoration: none;
+    color: midnightblue;
+}
+
+#main{
+    position: relative;
+    /* VH deter. the height of the element by setting it to a % of the viewport (NOTE: VW is used for width) */
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+#video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(Medial/cover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    /* The object-fit property deter. how a video or an image (AKA img element) is resized to fit inside its container (AKA parent element). Setting the value to "cover" causes the video to retain is aspect ratio and fill the given dimension */
+    object-fit: cover;
+
+    /* Blur the video */
+    /* filter:blur(3px);
+    transform:scale(1.15); */
+}
+
+#cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#content{
+    color: mintcream;
+    z-index: 2;
+    text-align: center;
+}
+
+#click{
+    /* Inline-block allow you to set top and bottom margin as well as width and height. This is not the case with inline. */
+    display: inline-block;
+    margin-top: 25px;
+    border: 2px solid ivory;
+    padding: 10px 30px;
+    background-color: rgb(96, 82, 82);
+    /* A elements will not inherit text color like other text elements will. Must be applied directly */
+    color: seashell;
+    border-radius: 10px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+#click:hover{
+    /* Changes the size of an element */
+    transform: scale(0.93);
+}
+
+#about{
+    padding: 40px;
+    text-align: center;
+}
+
+/* Descendent selector */
+#about p{
+    font-size: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#about h2{
+    margin: 40px 0;
+    color: rgb(96, 82, 82);
+}
+
+i{
+    font-size: 44px;
+    margin: 0 10px;
+}
